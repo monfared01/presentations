@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>An Introduction to Spiking Neural Networks</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css" />
+    <style>
+      .shower {
+        --slide-ratio: calc(16 / 9);
+      }
+
+      #cover h2 {
+        margin: 30px 0 0;
+        color: white;
+        text-align: center;
+        font-size: 70px;
+      }
+
+      #cover p {
+        margin: 10px 0 0;
+        text-align: center;
+        color: white;
+        font-style: italic;
+        font-size: 20px;
+      }
+
+      #cover p a {
+        color: white;
+      }
+    </style>
+  </head>
+  <body id="main" class="shower list">
+    <header class="caption">
+      <h1>An Introduction to Spiking Neural Networks</h1>
+      <p>Soft Computing Course, Kharazmi University, 2022</p>
+    </header>
+    <div class="progress"></div>
+
+    <script src="shower/shower.js"></script>
+
+    <script>
+      for (let i = 1; i <= 38; i++) {
+        const section = document.createElement("section");
+        section.classList.add("slide");
+        if (i === 1) {
+          section.id = "cover";
+        }
+        const figure = document.createElement("figure");
+        const img = document.createElement("img");
+        img.classList.add("cover");
+        img.src = `pictures/SNNs/SNNs-${i}.png`;
+        figure.appendChild(img);
+        section.appendChild(figure);
+
+        const element = document.getElementById("main");
+        element.appendChild(section);
+      }
+    </script>
+  </body>
+</html>
